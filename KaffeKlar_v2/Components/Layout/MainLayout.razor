@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+<RadzenComponents @rendermode="InteractiveAuto" />
+
+@* Required *@
+<MudThemeProvider />
+<MudPopoverProvider />
+
+@* Needed for dialogs *@
+<MudDialogProvider />
+
+@* Needed for snackbars *@
+<MudSnackbarProvider />
+
+<div class="page">
+    <MudAppBar Fixed="false" Style="background-color: #8D6E63;">
+        <MudText>Kaffeklar</MudText>
+        <MudSpacer />
+        <MudImage Src="coffee192.png" Fluid="true" Style="width: 3rem;" />
+    </MudAppBar>
+    <main>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
